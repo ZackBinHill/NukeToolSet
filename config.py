@@ -23,7 +23,14 @@ nuke_config = {
                     "shortcut": "",
                     "icon": "",
                     "type": "gizmo"
-                },
+                }, 
+                {
+                    "name": "Image/test_refresh",
+                    "command": "test_refresh",
+                    "shortcut": "",
+                    "icon": "",
+                    "type": "gizmo"
+                },                 
                 # Image icon
                 {
                     "name": "Image",
