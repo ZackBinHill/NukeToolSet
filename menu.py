@@ -8,7 +8,6 @@ import config
 import sys
 import command
 
-
 class NukeMenu(object):
     def __init__(self):
         self.config = config.nuke_config
@@ -154,6 +153,16 @@ class NukeMenu(object):
         nuke.knobDefault("Read.label",
                          "<font size=\"3\" color =#548DD4><b> Frame range :</b></font> "
                          "<font color = red>[value first] - [value last] </font>")
+
+
+# Only refresh gizmo
+toolbar = nuke.menu('Nodes')
+cgspread_menu = toolbar.addMenu('cgspread', os.path.join(cgspread_root_path, 'icons/icon_menu/logo.png'))
+cgspread_menu.clearMenu()
+#reload module
+reload(command)
+reload(config)
+cgspread_menu.addCommand('refresh', "execfile(os.path.join(cgspread_root_path, 'menu.py'))")
 
 
 if __name__ == '__main__':
