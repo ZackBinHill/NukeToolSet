@@ -7,7 +7,7 @@
 
 ``` stylus
 nuke.pluginAddPath("插件路径")
-cgspread_root_path = ("插件路径")
+cgspread_root_path = "插件路径"
 ```
 示例
 
