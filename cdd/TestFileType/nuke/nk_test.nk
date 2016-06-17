@@ -1,0 +1,71 @@
+#! C:/Program Files/Nuke9.0v6/nuke-9.0.6.dll -nx
+version 9.0 v6
+define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
+<layout version="1.0">
+    <window x="0" y="0" w="1920" h="1040" screen="0">
+        <splitter orientation="1">
+            <split size="40"/>
+            <dock id="" hideTitles="1" activePageId="Toolbar.1">
+                <page id="Toolbar.1"/>
+            </dock>
+            <split size="1241" stretch="1"/>
+            <splitter orientation="2">
+                <split size="572"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="402"/>
+                <dock id="" activePageId="DAG.1" focus="true">
+                    <page id="DAG.1"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
+                </dock>
+            </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+            </dock>
+        </splitter>
+    </window>
+</layout>
+}
+Root {
+ inputs 0
+ name C:/NukeToolSet/cdd/TestFileType/nuke/SH032_v01.nk
+ frame 40
+ format "2048 1556 0 0 2048 1556 1 2K_Super_35(full-ap)"
+ proxy_type scale
+ proxy_format "1024 778 0 0 1024 778 1 1K_Super_35(full-ap)"
+}
+ColorBars {
+ inputs 0
+ name ColorBars1
+ xpos 6948
+ ypos 4963
+}
+CheckerBoard2 {
+ inputs 0
+ name CheckerBoard1
+ xpos 7101
+ ypos 4961
+}
+Merge2 {
+ inputs 2
+ name Merge1
+ xpos 7030
+ ypos 5112
+}
+Viewer {
+ frame 40
+ frame_range 100-100
+ frame_range_lock true
+ fps 22
+ colour_sample_bbox {-0.330078125 -0.0693359375 -0.302734375 -0.048828125}
+ samplepoints {{0.048828125 0.1826171875}
+   }
+ viewerProcess rec709
+ input_process false
+ name Viewer2
+ xpos 7030
+ ypos 5431
+}
